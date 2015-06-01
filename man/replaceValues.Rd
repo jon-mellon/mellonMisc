@@ -2,7 +2,7 @@
 \alias{replaceValues}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+Replace values according to substitution matrix
 }
 \description{
 Performs a series of word substitutions on a plain text character vector. 
