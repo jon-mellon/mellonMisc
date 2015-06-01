@@ -43,7 +43,7 @@ spellCorrect <- function(text, sensitivity = 0.11) {
     text <- replaceValues(text, subs)
     new.length <- nrow(subs)
   }
-  return(text)
+  return(list(text = text, subs = subs))
 }
 
 
