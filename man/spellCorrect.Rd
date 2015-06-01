@@ -2,10 +2,10 @@
 \alias{spellCorrect}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+Merges similar spellings in text
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Clusters similar tokens iteratively. Useful for cleaning informal text prior to machine learning. 
 }
 \usage{
 spellCorrect(text, sensitivity = 0.11)
