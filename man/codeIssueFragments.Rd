@@ -1,11 +1,10 @@
 \name{codeIssueFragments}
 \alias{codeIssueFragments}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+Code text based on an existing model
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Takes an existing model, substitution set and matrix and predicts labels for new text. 
 }
 \usage{
 codeIssueFragments(text, substitute = all.subs, model, doc_matrix)
