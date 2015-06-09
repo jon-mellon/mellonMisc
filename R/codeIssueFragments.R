@@ -1,6 +1,7 @@
 codeIssueFragments <- function(text, 
                                substitute = all.subs, 
-                               model = mii.w6.model, doc_matrix = mii.w6.mat) {
+                               model = mii.w6.model, 
+                               doc_matrix = mii.w6.mat) {
   require(tm)
   text <- cleanText(text)
   text <- replaceValues(text, subs = substitute)
