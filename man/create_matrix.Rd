@@ -2,10 +2,10 @@
 \alias{create_matrix}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+Bug fixed from RTextTools package, will be deprecated as soon as the CRAN version is updated. 
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Bug fixed from RTextTools package, will be deprecated as soon as the CRAN version is updated. 
 }
 \usage{
 create_matrix(textColumns, language = "english", minDocFreq = 1, maxDocFreq = Inf, minWordLength = 3, maxWordLength = Inf, ngramLength = 1, originalMatrix = NULL, removeNumbers = FALSE, removePunctuation = TRUE, removeSparseTerms = 0, removeStopwords = TRUE, stemWords = FALSE, stripWhitespace = TRUE, toLower = TRUE, weighting = weightTf)
