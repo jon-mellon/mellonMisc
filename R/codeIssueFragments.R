@@ -1,7 +1,18 @@
 codeIssueFragments <- function(text, 
-                               substitute = all.subs, 
-                               model = mii.w6.model, 
-                               doc_matrix = mii.w6.mat) {
+                               substitute = NULL, 
+                               model = NULL, 
+                               doc_matrix = NULL, 
+                               bes.defaults = TRUE) {
+  if(bes.defaults) {
+    data(all.subs, mii.w6.model, mii.w6.mat)
+    substitute <- all.subs
+    model <- mii.w6.model
+    doc_matrix <- mii.w6.mat 
+  } else {
+    if(is.null(substitute)|is.null(model)|is.null(doc_matrix)) {
+      stop("Substitute, model and doc_matrix must be set unless bes.defaults is specified")
+    }
+  }
   require(tm)
   text <- cleanText(text)
   text <- replaceValues(text, subs = substitute)
