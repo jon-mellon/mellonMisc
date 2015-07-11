@@ -2,7 +2,7 @@
 \alias{htmlToText}
 Converts html page to text. 
 \title{
-%%  ~~function to do ... ~~
+Converts html to text (borrowed)
 }
 \description{
 Code from Tony Breyal (original available at https://github.com/tonybreyal/Blog-Reference-Functions/tree/master/R)
