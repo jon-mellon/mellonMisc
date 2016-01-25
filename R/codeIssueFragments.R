@@ -14,6 +14,7 @@ codeIssueFragments <- function(text,
     }
   }
   require(tm)
+  require(RTextTools)
   text <- cleanText(text)
   text <- replaceValues(text, subs = substitute)
   new_mat <- create_matrix(text, 
