@@ -1,5 +1,6 @@
 varToAdjacency <- function(df, var, cvar, relevant.countries, col = T) {
   df <- df[, c(cvar, var)]
+  relevant.countries <- sort(relevant.countries)
   start.point <- data.frame(country = relevant.countries, stringsAsFactors = F)
   df <- merge(x = start.point, y = df, by.x = "country", by.y = cvar, 
               all.x = T, all.y = F)
