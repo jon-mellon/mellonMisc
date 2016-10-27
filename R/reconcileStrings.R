@@ -4,7 +4,11 @@ reconcileStrings <- function(char.vector1, char.vector2, quiet = FALSE) {
 	# which wards in char.vector1 do not appear in char.vector2
 	unmatched.str1 <- sort(unique(char.vector1[which(!char.vector1 %in% char.vector2)]))
 	# which wards in char.vector2r do not appear in char.vector1
-	unmatched.str2 <- sort(unique(char.vector2[which(!char.vector2 %in% char.vector1)]))
+	unmatched.str2 <- sort(unique(char.vector2[which(!char.vector2 %in% char.vector1) ]))
+	if(length(unmatched.str1)==0 & length(unmatched.str2)==0) {
+	  message("No unmatched characters, returning original string")
+	  return(char.vector1)
+	}
 	
 	for(i in 1:length(unmatched.str1)) {
 		replacement <- unmatched.str2[
