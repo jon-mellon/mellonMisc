@@ -26,24 +26,3 @@ robustSEs <- function(fit, cluster = NULL) {
   cl.vcov <- vcov(fit) %*% ((m / (m-1)) * t(u.clust) %*% (u.clust))  %*% + vcov(fit)
   return(coeftest(fit, cl.vcov))
 }
-
-# summary(sig.predictors.domestic.non.us)
-# robustSEs(sig.predictors.domestic.non.us, cluster = "country_target")
-# robustSEs(sig.predictors.domestic.us)
-# robustSEs(sig.predictors.foreign.non.us, cluster = "country_target")
-# robustSEs(sig.predictors.foreign.us)
-# 
-# summary(sig.predictors.domestic.us)
-# nrow(sig.predictors.domestic.us$model)
-# 
-# 
-# summary(sig.predictors.foreign.non.us)
-# 
-# coeftest(sig.predictors.domestic, vcov=function(x) vcovHC(x, cluster="country_target", type="HC1"))
-# coeftest(sig.predictors.foreign, vcov=function(x) vcovHAC(x, cluster="country_target", type="HC1"))
-# install.packages("clusterSEs")
-# args(cluster.im.glm)
-# petition.comb$country_target
-# 
-# cluster.im.glm(sig.predictors.domestic, dat = petition.comb,
-#                cluster = ~ country_target)
