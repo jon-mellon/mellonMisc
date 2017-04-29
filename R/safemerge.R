@@ -7,8 +7,10 @@ safemerge <- function(x, y, by = intersect(names(x), names(y)),
                       ...) {
   # this function is safe merge
   type <- type[1]
+
+  
   if(type %in% c("1:1", "1:m")) {
-    if(any(duplicated(x[, by.x]) & complete.cases(x[, by.x]))) {
+    if(any(duplicated(x[, by.x]) & complete.cases(x[, by.x])) ) {
       error <- paste("Merge type defined as ", type, " but ",
                      by.x, " does not identify observations in x uniquely")
       stop(error)
