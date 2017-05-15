@@ -12,7 +12,9 @@ address2LatLon <- function(addresses) {
     lat[is.null(lat)] <- NA
     c(lat,lon)
   }
+  
   output <- t(sapply(output, getLatLon))
   colnames(output) <- c("lat", "lon")
+  output <- dtf(address = names(output), output)
   return(output)
 }
