@@ -15,6 +15,6 @@ address2LatLon <- function(addresses) {
   
   output <- t(sapply(output, getLatLon))
   colnames(output) <- c("lat", "lon")
-  output <- dtf(address = names(output), output)
+  output <- dtf(address = rownames(output), output)
   return(output)
 }
