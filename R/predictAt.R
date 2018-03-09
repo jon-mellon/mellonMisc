@@ -1,9 +1,9 @@
 predictAt <- function(mod, at ) {
-  vars <- names(at)
-  at <- expand.grid(at)
-  at$prob <- NA
-  at$se <- NA
-  
+	vars <- names(at)
+	at <- expand.grid(at)
+	at$prob <- NA
+	at$se <- NA
+	
   for(ii in 1:nrow(at)) {
     data <- model.frame(mod)
     if(any(!vars %in% names(data))) {
