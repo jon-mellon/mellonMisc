@@ -29,6 +29,9 @@ gbPtyCol <- function(x) {
                      `Scottish National Party (SNP)` = "#FFF95D",
                      Plaid = "#3F8428",
                      `Plaid Cymru`  = "#3F8428",
-                     DK = "#a4a6a8", Other = "#a4a6a8")
+                     DK = "#a4a6a8",
+  									 `Don't Know` = "#a4a6a8",
+  									 Other = "#a4a6a8",
+  									 Oth = "#a4a6a8")
   return(party.colours[x])
 }
