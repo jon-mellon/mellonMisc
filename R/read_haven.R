@@ -1,4 +1,4 @@
-read_haven <- function(file) {
+read_haven <- function(file, encoding= NULL) {
   require(haven)
   filetype <- strsplit(file, "\\.")[[1]]
   filetype <- tolower(filetype[length(filetype)])
@@ -6,7 +6,12 @@ read_haven <- function(file) {
     data <- read_sav(file)
   }
   if(filetype=="dta") {
-    data <- read_stata(file)
+  	if(!is.null(encoding)) {
+  		data <- read_stata(file, encoding = encoding)	
+  	} else {
+  		data <- read_stata(file)
+  	}
+    
   }
   if(filetype=="por") {
     data <- read_por(file)
