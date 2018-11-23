@@ -6,7 +6,7 @@ read_haven <- function(file) {
     data <- read_sav(file)
   }
   if(filetype=="dta") {
-    data <- read_stata(file, encoding = "utf8")
+    data <- read_stata(file)
   }
   if(filetype=="por") {
     data <- read_por(file)
