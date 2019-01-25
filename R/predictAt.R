@@ -22,7 +22,7 @@ predictAt <- function(mod, at, multiply.out = T, se = T) {
     
     at[ii, "prob"] <- Hmisc::wtd.mean(pred.prob$fit, weights = data$`(weights)`, na.rm = T)
     if(se) {
-      at[ii, "se"]   <- wtd.mean(pred.prob$se.fit, weights = data$`(weights)`, na.rm = T)  
+      at[ii, "se"]   <- Hmisc::wtd.mean(pred.prob$se.fit, weights = data$`(weights)`, na.rm = T)  
     }
     
   }
