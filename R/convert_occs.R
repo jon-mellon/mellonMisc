@@ -1,4 +1,5 @@
 convertOccs <- function(occs, from, to ) {
+  data("occ.crosswalks")
   occ.edges <- do.call(rbind, strsplit(names(occ.crosswalks), "-"))
   library(igraph)
   occ.graph <- graph.edgelist(occ.edges, directed = T)
