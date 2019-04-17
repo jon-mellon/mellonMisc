@@ -1,0 +1,3 @@
+slct <- function(...) {
+  dplyr::select(...)
+} 
