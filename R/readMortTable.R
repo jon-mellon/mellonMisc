@@ -1,5 +1,5 @@
 readMortTable <- function(file) {
-  mortality.table <- read_fwf(file = file, skip = 3, 
+  mortality.table <- readr::read_fwf(file = file, skip = 3, 
                               fwf_empty(readLines(file, skip = 3)[-1:-3]))
   # mortality.table[substr(mortality.table$X4, 1,9)!=" ", ]
   # mortality.table[substr(mortality.table$X4, 10,11)=="  ", ]$X4
@@ -13,10 +13,8 @@ readMortTable <- function(file) {
   mortality.table$Total <- gsub("^\\.", "0.", mortality.table$Total)
   mortality.table$Male <- gsub("^\\.", "0.", mortality.table$Male)
   mortality.table$Female <- gsub("^\\.", "0.", mortality.table$Female)
-  
-  mortality.table[mortality.table$Year==1931 & mortality.table$Age==108, "Total"]
-  
-  mortality.table$country <- strsplit(strsplit(file, '/')[[1]][[3]], "_")[[1]][1]
+  file.parts <- strsplit(file, '/')[[1]]
+  mortality.table$country <- strsplit(file.parts[[length(file.parts)]], "_")[[1]][1]
   mortality.table$Year <- as.numeric(mortality.table$Year)
   mortality.table$Age <- gsub("+", "", mortality.table$Age, fixed = T)
   mortality.table$Age <- as.numeric(mortality.table$Age)
