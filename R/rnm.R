@@ -1,0 +1,3 @@
+rnm <- function(...) {
+  dply::rename(...)
+}
