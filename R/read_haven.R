@@ -2,6 +2,9 @@ read_haven <- function(file, encoding= NULL) {
   require(haven)
   filetype <- strsplit(file, "\\.")[[1]]
   filetype <- tolower(filetype[length(filetype)])
+  if(filetype=="") {
+    stop("No filetype listed")
+  }
   if(filetype=="sav") {
     data <- read_sav(file)
   }
