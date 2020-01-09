@@ -2,7 +2,7 @@ gbPtyCol <- function(x) {
   party.colours <- c(Conservative = "#0087dc", 
                      Conservatives = "#0087dc", 
                      Tory = "#0087dc", 
-                     Brexit = "##12B6CF", 
+                     Brexit = "#12B6CF", 
                      `Brexit Party` = "#12B6CF", 
                      Tories = "#0087dc", 
                      `Conservative Party` = "#0087dc", 
