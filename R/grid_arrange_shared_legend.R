@@ -1,8 +1,12 @@
-grid_arrange_shared_legend <- function(..., nrow = 1, ncol = length(list(...)), position = c("bottom", "right")) {
+grid_arrange_shared_legend <- function(..., nrow = 1, ncol = length(list(...)), position = c("bottom", "right"), plots = NULL) {
+  
   
   # This one was definitely taken from stack exchange
 	#https://stackoverflow.com/questions/13649473/add-a-common-legend-for-combined-ggplots?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
-  plots <- list(...)
+  if(is.null(plots)) {
+    plots <- list(...)  
+  }
+  
   position <- match.arg(position)
   g <- ggplotGrob(plots[[1]]+ theme(legend.position = position))$grobs
   legend <- g[[which(sapply(g, function(x) x$name) == "guide-box")]]
