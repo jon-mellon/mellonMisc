@@ -21,6 +21,7 @@ gbPtyCol <- function(x) {
                      `Lib-Dems` = "#FDBB30",
                      `LD` = "#FDBB30", 
                      `Liberal Democrats` = "#FDBB30", 
+                     `Liberal Democrat` = "#FDBB30", 
                      UKIP = "#B3009D", 
                      `United Kingdom Independence Party` = "#B3009D", 
                      `United Kingdom Independence Party (UKIP)` = "#B3009D", 
@@ -31,10 +32,12 @@ gbPtyCol <- function(x) {
                      `The Scottish National Party (SNP)` = "#FFF95D",
                      `Scottish National Party (SNP)` = "#FFF95D",
                      Plaid = "#3F8428",
+                     PC = "#3F8428",
                      `Plaid Cymru`  = "#3F8428",
                      DK = "#a4a6a8",
   									 `Don't Know` = "#a4a6a8",
   									 Other = "#a4a6a8",
+  									 `An independent candidate` = "#a4a6a8",
   									 Oth = "#a4a6a8")
   return(party.colours[x])
 }
