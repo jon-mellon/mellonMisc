@@ -1,5 +1,4 @@
-
-
+#' @export makeSankey
 makeSankey <- function(switch, origin.date, dest.date, file = "sankey.html") {
 	colnames(switch) <- c("Origin", "Destination", "Percent")
 	

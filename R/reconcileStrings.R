@@ -1,3 +1,4 @@
+#' @export reconcileStrings
 reconcileStrings <- function(char.vector1, char.vector2, quiet = FALSE) {
 	# This function will return char.vector1 with values changed to match char.vector2.
 	require(Hmisc)	

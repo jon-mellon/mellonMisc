@@ -1,3 +1,4 @@
+#' @export replaceValues
 replaceValues <- function(text, subs) {
   text.list <- strsplit(text, split = " ")
   

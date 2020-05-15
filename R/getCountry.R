@@ -1,3 +1,4 @@
+#' @export getCountry
 getCountry <- function(locations) {
 	urls <- paste0("http://www.datasciencetoolkit.org/maps/api/geocode/json?sensor=false 
 &address=", sapply(locations, gsub, 

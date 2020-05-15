@@ -1,3 +1,4 @@
+#' @export getOneLoc
 getOneLoc <- function(name, google = FALSE) {
 	name <- toupper(name)
 	print(name)

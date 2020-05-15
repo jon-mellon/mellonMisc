@@ -1,3 +1,4 @@
+#' @export getSignatures
 getSignatures <- function(petition.id, page) {
 	output <- jsonlite::fromJSON(readLines(paste0("https://api.change.org/v1/petitions/",
 																			petition.id, "/signatures/?page=", page,

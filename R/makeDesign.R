@@ -1,3 +1,4 @@
+#' @export makeDesign
 makeDesign <- function(data, weight.var, id.var) {
   survey::svydesign(ids = data[!is.na(data[, weight.var]) & !is.na(data[, id.var]), id.var], 
             data = data[!is.na(data[, weight.var]) & !is.na(data[, id.var]), ], 

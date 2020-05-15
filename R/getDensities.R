@@ -1,3 +1,4 @@
+#' @export getDensities
 getDensities <- function(latitudes, longitudes, n = 200) {
 	require(RCurl)
 	require(rjson)

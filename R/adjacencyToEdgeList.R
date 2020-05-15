@@ -1,3 +1,4 @@
+#' @export adjacencyToEdgeList
 adjacencyToEdgeList <- function(adjacency) {
 	edge.list <- t(combn(c(colnames(adjacency), rownames(adjacency)), 2))
 	edge.list <- edge.list[!duplicated(edge.list), ]

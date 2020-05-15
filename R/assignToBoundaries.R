@@ -1,3 +1,4 @@
+#' @export assignToBoundaries
 assignToBoundaries <- function(trans.mat, thing.to.assign, labels) {
   # this function expects to receive a transition matrix with weights 
   # that determine what proportion of each row gets assigned to each column 

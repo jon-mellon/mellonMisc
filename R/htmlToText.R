@@ -1,3 +1,4 @@
+#' @export htmlToText
 htmlToText <- function(input, ...) {
   # code from Tony Breyal (original available at https://github.com/tonybreyal/Blog-Reference-Functions/tree/master/R)
   ###---PACKAGES ---###

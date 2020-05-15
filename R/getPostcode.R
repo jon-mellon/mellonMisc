@@ -1,3 +1,4 @@
+#' @export getPostcode
 getPostcode <- function(postcode) {
 	# This function correctly formats a UK postcode
 	end.code <- substr(postcode, start = nchar(postcode) - 2, stop = nchar(postcode))

@@ -1,3 +1,4 @@
+#' @export manyDistToLoc
 # this function measures the distance of a set of points from one reference point 
 manyDistToLoc <- function(points, reference.point) {
 	R <- 6371 

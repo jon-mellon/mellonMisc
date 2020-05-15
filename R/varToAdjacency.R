@@ -1,3 +1,4 @@
+#' @export varToAdjacency
 varToAdjacency <- function(df, var, cvar, relevant.countries, col = T) {
   df <- df[, c(cvar, var)]
   relevant.countries <- sort(relevant.countries)

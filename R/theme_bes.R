@@ -1,3 +1,4 @@
+#' @export theme_bes
 theme_bes <- function (base_size = 11, base_family = "") {
   theme_grey(base_size = base_size, base_family = base_family) %+replace% 
     theme(panel.background = element_rect(fill = "white", 

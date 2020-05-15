@@ -1,3 +1,4 @@
+#' @export writeSentenceList
 writeSentenceList <- function(x, oxcomma = T) {
   if(length(x) >2) {
     last.item <- x[length(x)]

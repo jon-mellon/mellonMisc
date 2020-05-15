@@ -1,3 +1,4 @@
+#' @export predGRMScores
 predGRMScores <- function(data, mod) {
   vals <- ltm::factor.scores(mod)
   colnames(vals)

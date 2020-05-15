@@ -1,3 +1,4 @@
+#' @export getMiddleInitial
 getMiddleInitial <- function(name) {
   name <- strsplit(name, " ")
   middles <- sapply(name, function(x) x[2])

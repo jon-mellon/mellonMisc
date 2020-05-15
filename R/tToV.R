@@ -1,3 +1,4 @@
+#' @export tToV
 tToV <- function(x) {
   if(length(dim(x))!=1) {
     stop("Dimensionality>1")

@@ -1,3 +1,4 @@
+#' @export safemerge
 safemerge <- function(x, y, by = intersect(names(x), names(y)),
                       by.x = by, by.y = by, all = FALSE, all.x = all, all.y = all,
                       sort = TRUE, suffixes = c(".x",".y"),

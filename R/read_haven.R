@@ -1,3 +1,4 @@
+#' @export read_haven
 read_haven <- function(file, encoding= NULL) {
   require(haven)
   filetype <- strsplit(file, "\\.")[[1]]

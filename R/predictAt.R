@@ -1,3 +1,4 @@
+#' @export predictAt
 predictAt <- function(mod, at, multiply.out = T, se = T) {
 	vars <- names(at)
 	if(multiply.out) {

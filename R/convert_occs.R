@@ -1,3 +1,4 @@
+#' @export convertOccs
 convertOccs <- function(occs, from, to ) {
   data("occ.crosswalks")
   occ.edges <- do.call(rbind, strsplit(names(occ.crosswalks), "-"))

@@ -1,3 +1,4 @@
+#' @export create_matrix
 create_matrix <- function (textColumns, language = "english", minDocFreq = 1, 
                            maxDocFreq = Inf, minWordLength = 3, maxWordLength = Inf, 
                            ngramLength = 1, originalMatrix = NULL, removeNumbers = FALSE, 

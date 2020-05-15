@@ -1,3 +1,4 @@
+#' @export factorInteractions
 factorInteractions <- function(x, y) {
 	if(!is.factor(x)) {
 		stop("X is not a factor")

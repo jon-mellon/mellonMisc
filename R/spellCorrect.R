@@ -1,3 +1,4 @@
+#' @export spellCorrect
 spellCorrect <- function(text, sensitivity = 0.11) {
   # auto-spell check 
   new.length <- 1

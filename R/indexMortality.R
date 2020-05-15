@@ -1,4 +1,4 @@
-
+#' @export indexMortality
 indexMortality <- function(mortality.table, index.year = 1967, valid.years, elec.gap) {
   mortality.table <- mortality.table[mortality.table$yob %in% valid.years, ]
   mortality.table <- mortality.table[mortality.table$Year>=index.year, ]

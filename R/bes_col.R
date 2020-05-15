@@ -1,3 +1,4 @@
+#' @export bes_col
 bes_col <- function(n=4) {
   if(n>4) {
     n <- 4

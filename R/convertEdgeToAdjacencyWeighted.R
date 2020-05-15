@@ -1,3 +1,4 @@
+#' @export convertEdgeToAdjacencyWeighted
 convertEdgeToAdjacencyWeighted <- function(weighted.edge.list) {
   all.actors <- unique(c(weighted.edge.list[, 1], weighted.edge.list[, 2]))
   fillInAdjacencyRow <- function(actor, all.actors, weighted.edge.list) {

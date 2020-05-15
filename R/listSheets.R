@@ -1,3 +1,4 @@
+#' @export listSheets
 listSheets <- function(file) {
   sheets<- readxl::excel_sheets(file)  
   sheet.list <- as.list(rep(NA, length(sheets)))

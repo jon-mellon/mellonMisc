@@ -1,3 +1,4 @@
+#' @export gbPtyCol
 gbPtyCol <- function(x) {
   party.colours <- c(Conservative = "#0087dc", 
                      Conservatives = "#0087dc", 

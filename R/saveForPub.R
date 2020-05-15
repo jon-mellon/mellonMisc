@@ -1,3 +1,4 @@
+#' @export saveForPub
 saveForPub <- function(object, file.path, width = 6, height = 6, dpi = 600, text_size  = NULL) {
   if(!is.null(text_size)) {
     object <- object + theme(text = element_text(size = text_size), 

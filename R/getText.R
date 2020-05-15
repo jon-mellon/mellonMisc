@@ -1,3 +1,4 @@
+#' @export getText
 getText <- function(file) {
   text <- try(htmlToText(file))
   if(class(text)!="try-error") {

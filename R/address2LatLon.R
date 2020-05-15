@@ -1,3 +1,4 @@
+#' @export address2LatLon
 address2LatLon <- function(addresses) {
   require(httr)
   addresses <- paste(addresses, collapse = "\",\"")

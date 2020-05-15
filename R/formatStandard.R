@@ -1,3 +1,4 @@
+#' @export formatStandard
 formatStandard <- function(x) {
 	x <- gsub(" and ", " & ", x)
 	x <- gsub("[[:punct:]]", "", x)

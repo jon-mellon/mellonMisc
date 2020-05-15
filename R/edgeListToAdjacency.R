@@ -1,3 +1,4 @@
+#' @export edgeListToAdjacency
 edgeListToAdjacency <- function(weighted.edge.list) {
   weighted.edge.list[, 1] <- as.character(weighted.edge.list[, 1])
   weighted.edge.list[, 2] <- as.character(weighted.edge.list[, 2])

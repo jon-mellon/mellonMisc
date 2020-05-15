@@ -1,3 +1,4 @@
+#' @export resetPar
 resetPar <- function() {
   dev.new()
   op <- par(no.readonly = TRUE)

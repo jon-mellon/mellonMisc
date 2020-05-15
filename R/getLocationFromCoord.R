@@ -1,3 +1,4 @@
+#' @export getLocationFromCoord
 getLocationFromCoord <- function(latitudes, longitudes,
 																 n = 200, type = "county") {
 	require(RCurl)

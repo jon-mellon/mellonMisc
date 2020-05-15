@@ -1,3 +1,4 @@
+#' @export readMortTable
 readMortTable <- function(file) {
   mortality.table <- readr::read_fwf(file = file, skip = 3, 
                               fwf_empty(readLines(file, skip = 3)[-1:-3]))

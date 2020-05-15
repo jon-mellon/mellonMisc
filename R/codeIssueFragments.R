@@ -1,3 +1,4 @@
+#' @export codeIssueFragments
 codeIssueFragments <- function(text, 
                                substitute = NULL, 
                                model = NULL, 

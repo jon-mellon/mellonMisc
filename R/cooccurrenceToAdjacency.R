@@ -1,3 +1,4 @@
+#' @export cooccurenceToAdjacency
 cooccurenceToAdjacency <- function (term.document.matrix, sum.weights = FALSE) {
   if(sum.weights) {
     countCooccurence <- function(term1, term2, term.doc.matrix) {

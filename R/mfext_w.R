@@ -1,3 +1,4 @@
+#' @export logitmfxest.w
 logitmfxest.w <- function(formula, data, atmean = TRUE, robust = FALSE, clustervar1 = NULL, 
            clustervar2 = NULL, start = NULL, control = list(), weights){
     

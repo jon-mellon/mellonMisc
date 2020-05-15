@@ -1,3 +1,4 @@
+#' @export predict.clogit
 predict.clogit <- function(object, newdata = NULL, 
                            type = "response",
                            formula, strata.var) {

@@ -1,3 +1,4 @@
+#' @export robustSEs
 robustSEs <- function(fit, cluster = NULL) {
   library(effects)
   library(sandwich)

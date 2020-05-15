@@ -1,3 +1,4 @@
+#' @export varToAdj
 varToAdj <- function(df, var, cvar, relevant.nodes, col = T) {
   df <- df[, c(cvar, var)]
   relevant.countries <- sort(relevant.countries)
