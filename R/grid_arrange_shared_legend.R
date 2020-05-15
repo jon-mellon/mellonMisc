@@ -2,8 +2,8 @@
 grid_arrange_shared_legend <- function (plots, nrow = 1, ncol = length(plots), 
 																						 position = c("bottom", "right")) 
 {
-	browser()
-	# plots <- list(...)
+	# browser()
+	plots <- list(...)
 	position <- match.arg(position)
 	g <- ggplotGrob(plots[[1]] + theme(legend.position = position))$grobs
 	legend <- g[[which(sapply(g, function(x) x$name) == "guide-box")]]
