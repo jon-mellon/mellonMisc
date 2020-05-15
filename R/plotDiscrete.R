@@ -1,3 +1,4 @@
+#' @export plotDiscrete
 plotDiscrete <- function(var, data, delete.values = c()) {
 	x <- data[, var]
 	x <- x[!is.na(x)]
