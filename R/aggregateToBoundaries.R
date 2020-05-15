@@ -1,5 +1,4 @@
 aggregateToBoundaries <- function(df, identifier.x, weight.x, lookup) {
-  require(mellonMisc)
   lookup <- lookup[which(lookup[, 1] %in% unlist(df[, identifier.x])), ]
   colnames(lookup) <- c("identifier.x", "identifier.y")
   lookup <- dtf(lookup)

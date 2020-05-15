@@ -1,8 +1,7 @@
 formatStandard <- function(x) {
-	require(Hmisc)
 	x <- gsub(" and ", " & ", x)
 	x <- gsub("[[:punct:]]", "", x)
-	x <- capitalize(x)
+	x <- Hmisc::capitalize(x)
 	x <- gsub(" +", " ", x)
 	x <- gsub("^City of ", "", x)
 	x <- gsub(" Borough Council", "", x)

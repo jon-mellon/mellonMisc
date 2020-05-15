@@ -4,6 +4,7 @@ Title: Lots of small things
 Version: 1.0
 Date: 2015-04-10
 Author: Jonathan Mellon 
-Maintainer: Who to complain to <jonathan.mellon@nuffield.ox.ac.uk>
+Maintainer: Who to complain to <jonathan.mellon@manchester.ac.uk>
 Description: Miscellaneous functions including network statistics, name matching and text scraping
 License: What license is it under?
+RoxygenNote: 7.1.0
