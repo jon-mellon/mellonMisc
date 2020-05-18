@@ -1,5 +1,5 @@
 #' @export grid_arrange_shared_legend
-grid_arrange_shared_legend <- function (plots, nrow = 1, ncol = length(plots), 
+grid_arrange_shared_legend <- function (..., nrow = 1, ncol = length(plots), 
 																						 position = c("bottom", "right")) 
 {
 	# browser()
