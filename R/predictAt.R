@@ -20,7 +20,7 @@ predictAt <- function(mod, at, multiply.out = T, se = T) {
     if(!se) {
       pred.prob <- dtf(fit = pred.prob)
     }
-    if(attributes(pred.prob)=="var") {
+    if(any(names(attributes(pred.prob))=="var") ){
     	pred.prob <- dtf(fit = as.vector(pred.prob), se.fit = sqrt(attributes(pred.prob)$var))
     }
     
