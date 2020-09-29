@@ -1,13 +1,15 @@
+
+
 #' @export predictAt
 predictAt <- function(mod, at, multiply.out = T, se = T) {
-	vars <- names(at)
-	if(multiply.out) {
-	at <- expand.grid(at)
-	}
-	at$prob <- NA
-	if(se) {
-	  at$se <- NA
-	}
+  vars <- names(at)
+  if(multiply.out) {
+    at <- expand.grid(at)
+  }
+  at$prob <- NA
+  if(se) {
+    at$se <- NA
+  }
   for(ii in 1:nrow(at)) {
     data <- model.frame(mod)
     if(any(!vars %in% names(data))) {
@@ -17,11 +19,17 @@ predictAt <- function(mod, at, multiply.out = T, se = T) {
       data[, jj] <- at[ii, jj]
     }
     pred.prob <- predict(mod, newdata = data, type = "response", se.fit = se)
+    
+    if("svyglm" %in%  class(mod)) {
+      pred.prob <- dtf(fit = as.vector(pred.prob), 
+                       se.fit = sqrt(attributes(pred.prob)$var))
+    }
+    
     if(!se) {
       pred.prob <- dtf(fit = pred.prob)
     }
     if(any(names(attributes(pred.prob))=="var") ){
-    	pred.prob <- dtf(fit = as.vector(pred.prob), se.fit = sqrt(attributes(pred.prob)$var))
+      pred.prob <- dtf(fit = as.vector(pred.prob), se.fit = sqrt(attributes(pred.prob)$var))
     }
     
     
@@ -31,9 +39,9 @@ predictAt <- function(mod, at, multiply.out = T, se = T) {
     }
     
   }
-	if(se) {
-  at$lci <- at$prob - 1.96 * at$se
-  at$uci <- at$prob + 1.96 * at$se
-	}
+  if(se) {
+    at$lci <- at$prob - 1.96 * at$se
+    at$uci <- at$prob + 1.96 * at$se
+  }
   return(at)
 }
