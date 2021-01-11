@@ -12,5 +12,10 @@ formatStandard <- function(x) {
 	x <- gsub(" County", "", x)
 	x <- gsub(" City Council", "", x)
 	x <- gsub(" Council", "", x)
+	x <- gsub("^ | $", "", x)
+	x <- tolower(x)
+	x <- strsplit(x, " ")	
+	x <- sapply(x , function(x) capitalize(x))
+	x <- sapply(x, paste, collapse = " ")
 	return(x)
 }
