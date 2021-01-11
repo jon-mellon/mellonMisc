@@ -1,6 +1,7 @@
 #' @export formatStandard
 formatStandard <- function(x) {
 	x <- gsub(" and ", " & ", x)
+	x <- gsub(" And ", " & ", x)
 	x <- gsub("[[:punct:]]", "", x)
 	x <- Hmisc::capitalize(x)
 	x <- gsub(" +", " ", x)
