@@ -16,6 +16,6 @@ formatStandard <- function(x) {
 	x <- tolower(x)
 	x <- strsplit(x, " ")	
 	x <- sapply(x , function(x) Hmisc::capitalize(x))
-	x <- sapply(x, paste, collapse = " ")
+	x <- sapply(x, paste, collapse = " ") 
 	return(x)
 }
