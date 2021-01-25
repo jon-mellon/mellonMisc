@@ -7,7 +7,7 @@ grid_arrange_shared_legend <- function (..., nrow = 1, ncol = length(plots),
 	position <- match.arg(position)
 	g <- ggplotGrob(plots[[legend.index]] + theme(legend.position = position))$grobs
 	legend <- g[[which(sapply(g, function(x) x$name) == "guide-box")]]
-	legend$grobs[[1]]$grobs[[1]]$width[[1]] <- ncol + 1
+	legend$grobs[[1]]$grobs[[1]]$width[[1]] <- grid::unit(ncol + 1, "npc")
 	lheight <- sum(legend$height)
 	lwidth <- sum(legend$width)
 	gl <- lapply(plots, function(x) x + theme(legend.position = "none"))
