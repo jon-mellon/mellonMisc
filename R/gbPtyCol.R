@@ -9,6 +9,7 @@ gbPtyCol <- function(x) {
   									 Reform = "#12B6CF", 
   									 `Reform UK` = "#12B6CF", 
                      `Brexit Party` = "#12B6CF", 
+  									 `BRX` = "#12B6CF", 
                      Tories = "#0087dc", 
                      `Conservative Party` = "#0087dc", 
   									 CON = "#0087dc", 
