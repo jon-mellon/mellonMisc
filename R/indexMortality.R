@@ -1,5 +1,19 @@
 #' @export indexMortality
 indexMortality <- function(mortality.table, index.year = 1967, valid.years, elec.gap) {
+	
+	mortality.table$yob <- mortality.table$Year - mortality.table$Age
+	if(max(mortality.table$Year)<index.year + elec.gap) {
+		mortality.table$Year <- mortality.table$Year + 5
+		mortality.table$yob <- mortality.table$yob + 5
+	}
+	
+	mortality.table <- mortality.table %>% arrange(yob, Year)
+	
+	mortality.table$Female[which(mortality.table$Female > 0.99)] <- 0.98
+	mortality.table$Male[which(mortality.table$Male > 0.99)] <- 0.98
+	mortality.table$Total[which(mortality.table$Total > 0.99)] <- 0.98
+	
+	
   mortality.table <- mortality.table[mortality.table$yob %in% valid.years, ]
   mortality.table <- mortality.table[mortality.table$Year>=index.year, ]
   mortality.table$maleliferate <- 1 - mortality.table$Male
@@ -17,10 +31,9 @@ indexMortality <- function(mortality.table, index.year = 1967, valid.years, elec
   mortality.table <- mortality.table[!(is.na(mortality.table$Female) & is.na(mortality.table$Male) & is.na(mortality.table$Total)), ]
   
   pickCumMort <- function(cum, yearsgoneby) {
-    cum <- dtf(cum = cum, yearsout = 1:length(cum))
-    cum <- rbind(dtf(cum = 0, yearsout = 0), cum)
-    
-    pred.dead <- predict(newdata = dtf(yearsout = yearsgoneby), loess(data= cum, formula = cum ~ yearsout))
+    cumd <- dtf(cum = cum, yearsout = 1:length(cum))
+    cumd <- rbind(dtf(cum = 0, yearsout = 0), cumd)
+    pred.dead <- predict(newdata = dtf(yearsout = yearsgoneby), loess(data= cumd, formula = cum ~ yearsout))
     return(pred.dead)
   }
   
