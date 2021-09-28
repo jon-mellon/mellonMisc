@@ -3,6 +3,7 @@ indexMortality <- function(mortality.table, index.year = 1967, valid.years, elec
 	
 	mortality.table$yob <- mortality.table$Year - mortality.table$Age
 	if(max(mortality.table$Year)<index.year + elec.gap) {
+		message("Sample included years not present in mortality data, shifting years by 5")
 		mortality.table$Year <- mortality.table$Year + 5
 		mortality.table$yob <- mortality.table$yob + 5
 	}
