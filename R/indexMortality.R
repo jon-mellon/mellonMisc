@@ -44,6 +44,6 @@ indexMortality <- function(mortality.table, index.year = 1967, valid.years, elec
                                yob = unique(mortality.table$yob)),
                            dtf(mortality = tapply(mortality.table$cumdeathtotal, mortality.table$yob, pickCumMort, yearsgoneby = elec.gap), gender = "Total",
                                yob = unique(mortality.table$yob)))
-  
+  panel.mortality$mortality[is.na(panel.mortality$mortality) & ((index.year - panel.mortality$yob) > 80)] <- max(panel.mortality$mortality, na.rm = T)
   return(panel.mortality)
 }
