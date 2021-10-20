@@ -1,11 +1,12 @@
 #' @export indexMortality
-	indexMortality <- function(mortality.table, index.year = 1967, valid.years, elec.gap) {
+	indexMortality <- function(mortality.table, index.year = 1967, valid.years, elec.gap, noisy = T) {
 	
 	mortality.table$yob <- mortality.table$Year - mortality.table$Age
 	if(max(mortality.table$Year)<(floor(index.year) + elec.gap)) {
 		years.to.add <- ceiling((floor(index.year) + elec.gap) - max(mortality.table$Year)) + 1
-		
-		message(paste("Sample included years not present in mortality data, shifting years by ", years.to.add))
+		if(noisy) {
+			message(paste("Sample included years not present in mortality data, shifting years by ", years.to.add))	
+		}
 		mortality.table$Year <- mortality.table$Year + years.to.add
 		mortality.table$yob <- mortality.table$yob + years.to.add
 	}
@@ -24,9 +25,13 @@
   for(ii in miss.open) {
   	mortality.table[mortality.table$Year==ii & mortality.table$yob==min.yob[ii], "OpenInterval"] <- TRUE
   }
-	mortality.table$Male[mortality.table$OpenInterval & mortality.table$Male==0] <- max(mortality.table$Male)
-	mortality.table$Female[mortality.table$OpenInterval & mortality.table$Female==0] <- max(mortality.table$Female)
-	mortality.table$Total[mortality.table$OpenInterval & mortality.table$Total==0] <- max(mortality.table$Total)
+	mortality.table$Male[mortality.table$OpenInterval & mortality.table$Male==0] <- max(mortality.table$Male, na.rm = T)
+	mortality.table$Female[mortality.table$OpenInterval & mortality.table$Female==0] <- max(mortality.table$Female, na.rm = T)
+	mortality.table$Total[mortality.table$OpenInterval & mortality.table$Total==0] <- max(mortality.table$Total, na.rm = T)
+	
+	mortality.table$Female[is.na(mortality.table$Female) & mortality.table$Age>80] <- max(mortality.table$Female, na.rm = T)
+	mortality.table$Male[is.na(mortality.table$Male) & mortality.table$Age>80] <- max(mortality.table$Male, na.rm = T)
+	mortality.table$Total[is.na(mortality.table$Total) & mortality.table$Age>80] <- max(mortality.table$Total, na.rm = T)
 	
   for(year in unique(mortality.table$Year)) {
   	miss.years <- valid.years[!valid.years %in% mortality.table$yob[mortality.table$Year==year]]
@@ -89,7 +94,8 @@
   }
   
   
-  # cum <- mortality.table[mortality.table$yob==1902, ]
+  # cum <- mortality.table[mortality.table$yob==1902, "cumdeathmale"]
+  #  View(mortality.table[mortality.table$yob==1902, ])
   panel.mortality <- rbind(dtf(mortality = tapply(mortality.table$cumdeathmale, 
   																								mortality.table$yob, pickCumMort, yearsgoneby = elec.gap), 
   														 gender = "Male", yob = unique(mortality.table$yob)), 
