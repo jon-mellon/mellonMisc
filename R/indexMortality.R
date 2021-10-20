@@ -2,10 +2,12 @@
 	indexMortality <- function(mortality.table, index.year = 1967, valid.years, elec.gap) {
 	
 	mortality.table$yob <- mortality.table$Year - mortality.table$Age
-	if(max(mortality.table$Year)<(floor(index.year) + elec.gap + 2)) {
-		message("Sample included years not present in mortality data, shifting years by 5")
-		mortality.table$Year <- mortality.table$Year + 5
-		mortality.table$yob <- mortality.table$yob + 5
+	if(max(mortality.table$Year)<(floor(index.year) + elec.gap)) {
+		years.to.add <- ceiling((floor(index.year) + elec.gap) - max(mortality.table$Year))
+		
+		message(paste("Sample included years not present in mortality data, shifting years by ", years.to.add))
+		mortality.table$Year <- mortality.table$Year + years.to.add
+		mortality.table$yob <- mortality.table$yob + years.to.add
 	}
 	
 	mortality.table <- mortality.table %>% arrange(yob, Year)
@@ -53,7 +55,12 @@
   	year.diffs <- (yearsgoneby - cumd$yearsout)
   	
   	minmort <- cumd$cum[max(which(year.diffs>0))]
-  	maxmort <- cumd$cum[min(which(year.diffs<0))]
+  	if(min(which(year.diffs<0))!=Inf) {
+  		maxmort <- cumd$cum[min(which(year.diffs<0))]	
+  	} else {
+  		maxmort <- 1
+  	}
+  	
   	# mod<- scam(data = cumd, formula = cum ~ s(yearsout, bs = "mpi"), 
   	# 		 family = "quasibinomial", knots =2)
   	mod<- loess(data = cumd, formula = cum ~ yearsout)
