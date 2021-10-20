@@ -20,7 +20,7 @@
   for(year in unique(mortality.table$Year)) {
   	miss.years <- valid.years[!valid.years %in% mortality.table$yob[mortality.table$Year==year]]
   	extra.mort.row <- mortality.table %>% filter(OpenInterval & Year==year)
-  	miss.years
+  	
   	extra.mort.row <- extra.mort.row[rep(1, length(miss.years)), ]
   	extra.mort.row$yob <- miss.years
   	extra.mort.row$Age <- extra.mort.row$Year - extra.mort.row$yob
@@ -54,10 +54,11 @@
   	
   	minmort <- cumd$cum[max(which(year.diffs>0))]
   	maxmort <- cumd$cum[min(which(year.diffs<0))]
-  	
-  	pred.dead <- predict(newdata = dtf(yearsout = yearsgoneby), 
-  											 scam(data = cumd, formula = cum ~ s(yearsout, bs = "mpi"), 
-  											 		 family = "quasibinomial"), type = "response")
+  	# mod<- scam(data = cumd, formula = cum ~ s(yearsout, bs = "mpi"), 
+  	# 		 family = "quasibinomial", knots =2)
+  	mod<- loess(data = cumd, formula = cum ~ yearsout)
+ 	 	pred.dead <- predict(newdata = dtf(yearsout = yearsgoneby), 
+  											 mod, type = "response")
   	
   	if(pred.dead>maxmort) {
   		return(maxmort)
@@ -67,6 +68,9 @@
   	}
   	return(pred.dead)
   }
+  
+  
+  # cum <- mortality.table$cumdeathmale[mortality.table$yob==1902]
   panel.mortality <- rbind(dtf(mortality = tapply(mortality.table$cumdeathmale, 
   																								mortality.table$yob, pickCumMort, yearsgoneby = elec.gap), 
   														 gender = "Male", yob = unique(mortality.table$yob)), 
