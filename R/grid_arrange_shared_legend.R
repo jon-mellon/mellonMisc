@@ -1,6 +1,7 @@
 #' @export grid_arrange_shared_legend
 grid_arrange_shared_legend <- function (..., nrow = 1, ncol = length(plots), 
-																						 position = c("bottom", "right"), legend.index = 1) 
+																						 position = c("bottom", "right"), legend.index = 1, 
+																				left = NULL, bottom = NULL, right = NULL, top = NULL) 
 {
 	# browser()
 	plots <- list(...)
@@ -14,9 +15,11 @@ grid_arrange_shared_legend <- function (..., nrow = 1, ncol = length(plots),
 	gl <- c(gl, nrow = nrow, ncol = ncol)
 	combined <- switch(position, bottom = arrangeGrob(do.call(arrangeGrob, gl), 
 																										legend, ncol = 1,
-																										heights = grid::unit.c(grid::unit(1, "npc") - lheight, lheight)), 
+																										heights = grid::unit.c(grid::unit(1, "npc") - lheight, lheight),
+																										top = top, bottom = bottom, left = left, right = right), 
 										 right = arrangeGrob(do.call(arrangeGrob, gl), 
 										 										legend, ncol = 2, 
-										 										widths = grid::unit.c(grid::unit(1, "npc") - lwidth, lwidth)))
+										 										widths = grid::unit.c(grid::unit(1, "npc") - lwidth, lwidth),
+										 										top = top, bottom = bottom, left = left, right = right))
 	return(combined)
 }
