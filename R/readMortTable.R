@@ -22,7 +22,7 @@ readMortTable <- function(file) {
   mortality.table <- dtf(mortality.table)
   
   mortality.table$yob <- mortality.table$Year - mortality.table$Age
-  mortality.table <- mortality.table %>% arrange(yob, Year)
+  mortality.table <- dplyr::arrange(mortality.table, yob, Year)
   
   mortality.table$Female[which(mortality.table$Female>0.99)] <- 0.98
   mortality.table$Male[which(mortality.table$Male>0.99)] <- 0.98
