@@ -1,6 +1,6 @@
 #' @export readMortTable
 readMortTable <- function(file) {
-	testcol <- fwf_empty(file, skip = 3)
+	testcol <- readr::fwf_empty(file, skip = 3)
 	
   mortality.table <- readr::read_fwf(file = file, skip = 3, 
   																	 testcol)
