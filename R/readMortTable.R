@@ -1,12 +1,9 @@
 #' @export readMortTable
 readMortTable <- function(file) {
+	testcol <- fwf_empty(file, skip = 3)
+	
   mortality.table <- readr::read_fwf(file = file, skip = 3, 
-                              fwf_empty(readLines(file, skip = 3)[-1:-3]))
-  # mortality.table[substr(mortality.table$X4, 1,9)!=" ", ]
-  # mortality.table[substr(mortality.table$X4, 10,11)=="  ", ]$X4
-  # 
-  # readLines(file, skip = 3)[nchar(readLines(file, skip = 3))!=71]
-  # readLines(file, skip = 3)[grepl("\t", readLines(file, skip = 3))]
+  																	 testcol)
   
   mortality.table <- mortality.table[, colSums(is.na(mortality.table))!=nrow(mortality.table)]
   
