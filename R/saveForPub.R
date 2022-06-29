@@ -9,6 +9,9 @@ saveForPub <- function(object, file.path, width = 6, height = 6,
   
   try(ggsave(object, file = paste0(file.path, ".png"), 
   					 width = width, height = height, dpi = dpi), silent = silent)
+	try(ggsave(object, file = paste0(file.path, ".pdf"), 
+						 width = width, height = height, dpi = dpi, 
+						 device = cairo_pdf), silent = silent)
   try(ggsave(object, file = paste0(file.path, ".tiff"), 
          width = width, height = height, compression = "lzw", dpi = dpi), 
   		silent = silent)
