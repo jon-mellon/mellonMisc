@@ -1,0 +1,15 @@
+utils::globalVariables(c(
+  ".mellon_weights",
+  "Freq",
+  "Information",
+  "Item",
+  "TIF",
+  "Theta",
+  "Year",
+  "all.subs",
+  "mii.w6.mat",
+  "mii.w6.model",
+  "occ.crosswalks",
+  "yob",
+  "z"
+))

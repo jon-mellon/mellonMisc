@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head><title>R: Miscellaneous Utility Functions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+<h1> Miscellaneous Utility Functions
+<img class="toplogo" src="../../../doc/html/Rlogo.svg" alt="[R logo]" />
+</h1>
+<hr/>
+<div style="text-align: center;">
+<a href="../../../doc/html/packages.html"><img class="arrow" src="../../../doc/html/left.jpg" alt="[Up]" /></a>
+<a href="../../../doc/html/index.html"><img class="arrow" src="../../../doc/html/up.jpg" alt="[Top]" /></a>
+</div><h2>Documentation for package &lsquo;mellonMisc&rsquo; version 1.0</h2>
+
+<ul><li><a href="../DESCRIPTION" type="text/plain; charset=utf-8">DESCRIPTION file</a>.</li>
+</ul>
+
+<h2>Help Pages</h2>
+
+
+<table style="width: 100%;">
+<tr><td style="width: 25%;"><a href="mellonMisc-package.html">mellonMisc-package</a></td>
+<td>mellonMisc: Miscellaneous utilities for data analysis</td></tr>
+<tr><td style="width: 25%;"><a href="address2LatLon.html">address2LatLon</a></td>
+<td>Geocode addresses via Data Science Toolkit</td></tr>
+<tr><td style="width: 25%;"><a href="adjacencyToEdgeList.html">adjacencyToEdgeList</a></td>
+<td>Convert adjacency matrix to edge list</td></tr>
+<tr><td style="width: 25%;"><a href="aggregateToBoundaries.html">aggregateToBoundaries</a></td>
+<td>Aggregate values to boundary identifiers</td></tr>
+<tr><td style="width: 25%;"><a href="all.subs.html">all.subs</a></td>
+<td>Substitution table for text cleaning</td></tr>
+<tr><td style="width: 25%;"><a href="allDup.html">allDup</a></td>
+<td>Identify all duplicates</td></tr>
+<tr><td style="width: 25%;"><a href="assignToBoundaries.html">assignToBoundaries</a></td>
+<td>Allocate values using a transition matrix</td></tr>
+<tr><td style="width: 25%;"><a href="bes_col.html">bes_col</a></td>
+<td>BES color palette</td></tr>
+<tr><td style="width: 25%;"><a href="calcInfo.html">calcInfo</a></td>
+<td>Estimate reliability from GRM scores</td></tr>
+<tr><td style="width: 25%;"><a href="cleanText.html">cleanText</a></td>
+<td>Basic text cleaning</td></tr>
+<tr><td style="width: 25%;"><a href="codeIssueFragments.html">codeIssueFragments</a></td>
+<td>Classify issue fragments with a trained model</td></tr>
+<tr><td style="width: 25%;"><a href="convertEdgeToAdjacencyWeighted.html">convertEdgeToAdjacencyWeighted</a></td>
+<td>Convert weighted edge list to adjacency matrix</td></tr>
+<tr><td style="width: 25%;"><a href="convertOccs.html">convertOccs</a></td>
+<td>Convert occupation codes</td></tr>
+<tr><td style="width: 25%;"><a href="cooccurenceToAdjacency.html">cooccurenceToAdjacency</a></td>
+<td>Co-occurrence to adjacency matrix</td></tr>
+<tr><td style="width: 25%;"><a href="create_matrix.html">create_matrix</a></td>
+<td>Create a document-term matrix</td></tr>
+<tr><td style="width: 25%;"><a href="dtf.html">dtf</a></td>
+<td>Data frame shortcut</td></tr>
+<tr><td style="width: 25%;"><a href="dupEither.html">dupEither</a></td>
+<td>Identify duplicates from either direction</td></tr>
+<tr><td style="width: 25%;"><a href="edgeListToAdjacency.html">edgeListToAdjacency</a></td>
+<td>Convert edge list to adjacency matrix</td></tr>
+<tr><td style="width: 25%;"><a href="excelWinDate.html">excelWinDate</a></td>
+<td>Convert Excel serial dates</td></tr>
+<tr><td style="width: 25%;"><a href="factorInteractions.html">factorInteractions</a></td>
+<td>Combine factor levels</td></tr>
+<tr><td style="width: 25%;"><a href="formatStandard.html">formatStandard</a></td>
+<td>Standardize place-name formatting</td></tr>
+<tr><td style="width: 25%;"><a href="gbPtyCol.html">gbPtyCol</a></td>
+<td>UK party color lookup</td></tr>
+<tr><td style="width: 25%;"><a href="getCountry.html">getCountry</a></td>
+<td>Infer country from location strings</td></tr>
+<tr><td style="width: 25%;"><a href="getDensities.html">getDensities</a></td>
+<td>Fetch population densities for coordinates</td></tr>
+<tr><td style="width: 25%;"><a href="getLocationFromCoord.html">getLocationFromCoord</a></td>
+<td>Reverse geocode coordinates to political areas</td></tr>
+<tr><td style="width: 25%;"><a href="getMiddleInitial.html">getMiddleInitial</a></td>
+<td>Extract middle initials</td></tr>
+<tr><td style="width: 25%;"><a href="getOneLoc.html">getOneLoc</a></td>
+<td>Geocode a single location string</td></tr>
+<tr><td style="width: 25%;"><a href="getPostcode.html">getPostcode</a></td>
+<td>Format a UK postcode</td></tr>
+<tr><td style="width: 25%;"><a href="getSignatures.html">getSignatures</a></td>
+<td>Fetch Change.org petition signatures</td></tr>
+<tr><td style="width: 25%;"><a href="getText.html">getText</a></td>
+<td>Extract text from HTML content</td></tr>
+<tr><td style="width: 25%;"><a href="grid_arrange_shared_legend.html">grid_arrange_shared_legend</a></td>
+<td>Arrange ggplots with a shared legend</td></tr>
+<tr><td style="width: 25%;"><a href="htmlToText.html">htmlToText</a></td>
+<td>Convert HTML to plain text</td></tr>
+<tr><td style="width: 25%;"><a href="informationToReliability.html">informationToReliability</a></td>
+<td>Convert information to reliability</td></tr>
+<tr><td style="width: 25%;"><a href="listSheets.html">listSheets</a></td>
+<td>Read all sheets from an Excel file</td></tr>
+<tr><td style="width: 25%;"><a href="logitmfxest.w.html">logitmfxest.w</a></td>
+<td>Logit marginal effects with optional clustering</td></tr>
+<tr><td style="width: 25%;"><a href="makeChunkIndex.html">makeChunkIndex</a></td>
+<td>Build chunk indices</td></tr>
+<tr><td style="width: 25%;"><a href="makeDesign.html">makeDesign</a></td>
+<td>Build a survey design object</td></tr>
+<tr><td style="width: 25%;"><a href="makeSankey.html">makeSankey</a></td>
+<td>Create a Google Charts Sankey HTML file</td></tr>
+<tr><td style="width: 25%;"><a href="manyDistToLoc.html">manyDistToLoc</a></td>
+<td>Distance to a reference point</td></tr>
+<tr><td style="width: 25%;"><a href="maxByRow.html">maxByRow</a></td>
+<td>Row-wise maximum</td></tr>
+<tr><td style="width: 25%;"><a href="meanByRow.html">meanByRow</a></td>
+<td>Row-wise mean</td></tr>
+<tr><td style="width: 25%;"><a href="mellonMisc-package.html">mellonMisc</a></td>
+<td>mellonMisc: Miscellaneous utilities for data analysis</td></tr>
+<tr><td style="width: 25%;"><a href="mii.w6.mat.html">mii.w6.mat</a></td>
+<td>Issue coding document-term matrix</td></tr>
+<tr><td style="width: 25%;"><a href="mii.w6.model.html">mii.w6.model</a></td>
+<td>Issue coding SVM model</td></tr>
+<tr><td style="width: 25%;"><a href="minByRow.html">minByRow</a></td>
+<td>Row-wise minimum</td></tr>
+<tr><td style="width: 25%;"><a href="occ.crosswalks.html">occ.crosswalks</a></td>
+<td>Occupation crosswalks</td></tr>
+<tr><td style="width: 25%;"><a href="orderWords.html">orderWords</a></td>
+<td>Sort words within strings</td></tr>
+<tr><td style="width: 25%;"><a href="outreg.html">outreg</a></td>
+<td>Format regression output</td></tr>
+<tr><td style="width: 25%;"><a href="p2p.html">p2p</a></td>
+<td>Proportion to percentage</td></tr>
+<tr><td style="width: 25%;"><a href="plotDiscrete.html">plotDiscrete</a></td>
+<td>Plot a discrete variable</td></tr>
+<tr><td style="width: 25%;"><a href="predGRMScores.html">predGRMScores</a></td>
+<td>Predict GRM scores</td></tr>
+<tr><td style="width: 25%;"><a href="predict.clogit.html">predict.clogit</a></td>
+<td>Predict probabilities from a clogit model</td></tr>
+<tr><td style="width: 25%;"><a href="predictAt.html">predictAt</a></td>
+<td>Predict at specified covariate values</td></tr>
+<tr><td style="width: 25%;"><a href="readMortTable.html">readMortTable</a></td>
+<td>Read a mortality table</td></tr>
+<tr><td style="width: 25%;"><a href="read_haven.html">read_haven</a></td>
+<td>Read a Haven-supported data file</td></tr>
+<tr><td style="width: 25%;"><a href="reconcileStrings.html">reconcileStrings</a></td>
+<td>Reconcile string vectors</td></tr>
+<tr><td style="width: 25%;"><a href="replaceValues.html">replaceValues</a></td>
+<td>Replace tokens in text</td></tr>
+<tr><td style="width: 25%;"><a href="resetPar.html">resetPar</a></td>
+<td>Reset graphics parameters</td></tr>
+<tr><td style="width: 25%;"><a href="rnm.html">rnm</a></td>
+<td>Dplyr rename shortcut</td></tr>
+<tr><td style="width: 25%;"><a href="robustSEs.html">robustSEs</a></td>
+<td>Robust standard errors</td></tr>
+<tr><td style="width: 25%;"><a href="safemerge.html">safemerge</a></td>
+<td>Safe merge with key checks</td></tr>
+<tr><td style="width: 25%;"><a href="saveForPub.html">saveForPub</a></td>
+<td>Save a ggplot in multiple publication formats</td></tr>
+<tr><td style="width: 25%;"><a href="slct.html">slct</a></td>
+<td>Dplyr select shortcut</td></tr>
+<tr><td style="width: 25%;"><a href="soc.html">soc</a></td>
+<td>SOC 2010 coding data</td></tr>
+<tr><td style="width: 25%;"><a href="spellCorrect.html">spellCorrect</a></td>
+<td>Approximate spell correction</td></tr>
+<tr><td style="width: 25%;"><a href="sumByRow.html">sumByRow</a></td>
+<td>Row-wise sum</td></tr>
+<tr><td style="width: 25%;"><a href="theme_bes.html">theme_bes</a></td>
+<td>BES ggplot theme</td></tr>
+<tr><td style="width: 25%;"><a href="tif.html">tif</a></td>
+<td>Plot item and test information functions</td></tr>
+<tr><td style="width: 25%;"><a href="topBottom.html">topBottom</a></td>
+<td>Extract top and bottom rows</td></tr>
+<tr><td style="width: 25%;"><a href="tToV.html">tToV</a></td>
+<td>Table to vector</td></tr>
+<tr><td style="width: 25%;"><a href="us_data_2010.html">us_data_2010</a></td>
+<td>US data from 2010</td></tr>
+<tr><td style="width: 25%;"><a href="varToAdj.html">varToAdj</a></td>
+<td>Convert a variable to an adjacency matrix</td></tr>
+<tr><td style="width: 25%;"><a href="varToAdjacency.html">varToAdjacency</a></td>
+<td>Convert a variable to an adjacency matrix</td></tr>
+<tr><td style="width: 25%;"><a href="writeSentenceList.html">writeSentenceList</a></td>
+<td>Format a list as a sentence</td></tr>
+<tr><td style="width: 25%;"><a href="zeroOrNA.html">zeroOrNA</a></td>
+<td>Flag zero or missing values</td></tr>
+</table>
+</div></body></html>

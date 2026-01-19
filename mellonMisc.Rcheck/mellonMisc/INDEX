@@ -1,0 +1,79 @@
+address2LatLon          Geocode addresses via Data Science Toolkit
+adjacencyToEdgeList     Convert adjacency matrix to edge list
+aggregateToBoundaries   Aggregate values to boundary identifiers
+all.subs                Substitution table for text cleaning
+allDup                  Identify all duplicates
+assignToBoundaries      Allocate values using a transition matrix
+bes_col                 BES color palette
+calcInfo                Estimate reliability from GRM scores
+cleanText               Basic text cleaning
+codeIssueFragments      Classify issue fragments with a trained model
+convertEdgeToAdjacencyWeighted
+                        Convert weighted edge list to adjacency matrix
+convertOccs             Convert occupation codes
+cooccurenceToAdjacency
+                        Co-occurrence to adjacency matrix
+create_matrix           Create a document-term matrix
+dtf                     Data frame shortcut
+dupEither               Identify duplicates from either direction
+edgeListToAdjacency     Convert edge list to adjacency matrix
+excelWinDate            Convert Excel serial dates
+factorInteractions      Combine factor levels
+formatStandard          Standardize place-name formatting
+gbPtyCol                UK party color lookup
+getCountry              Infer country from location strings
+getDensities            Fetch population densities for coordinates
+getLocationFromCoord    Reverse geocode coordinates to political areas
+getMiddleInitial        Extract middle initials
+getOneLoc               Geocode a single location string
+getPostcode             Format a UK postcode
+getSignatures           Fetch Change.org petition signatures
+getText                 Extract text from HTML content
+grid_arrange_shared_legend
+                        Arrange ggplots with a shared legend
+htmlToText              Convert HTML to plain text
+informationToReliability
+                        Convert information to reliability
+listSheets              Read all sheets from an Excel file
+logitmfxest.w           Logit marginal effects with optional clustering
+makeChunkIndex          Build chunk indices
+makeDesign              Build a survey design object
+makeSankey              Create a Google Charts Sankey HTML file
+manyDistToLoc           Distance to a reference point
+maxByRow                Row-wise maximum
+meanByRow               Row-wise mean
+mellonMisc-package      mellonMisc: Miscellaneous utilities for data
+                        analysis
+mii.w6.mat              Issue coding document-term matrix
+mii.w6.model            Issue coding SVM model
+minByRow                Row-wise minimum
+occ.crosswalks          Occupation crosswalks
+orderWords              Sort words within strings
+outreg                  Format regression output
+p2p                     Proportion to percentage
+plotDiscrete            Plot a discrete variable
+predGRMScores           Predict GRM scores
+predict.clogit          Predict probabilities from a clogit model
+predictAt               Predict at specified covariate values
+readMortTable           Read a mortality table
+read_haven              Read a Haven-supported data file
+reconcileStrings        Reconcile string vectors
+replaceValues           Replace tokens in text
+resetPar                Reset graphics parameters
+rnm                     Dplyr rename shortcut
+robustSEs               Robust standard errors
+safemerge               Safe merge with key checks
+saveForPub              Save a ggplot in multiple publication formats
+slct                    Dplyr select shortcut
+soc                     SOC 2010 coding data
+spellCorrect            Approximate spell correction
+sumByRow                Row-wise sum
+tToV                    Table to vector
+theme_bes               BES ggplot theme
+tif                     Plot item and test information functions
+topBottom               Extract top and bottom rows
+us_data_2010            US data from 2010
+varToAdj                Convert a variable to an adjacency matrix
+varToAdjacency          Convert a variable to an adjacency matrix
+writeSentenceList       Format a list as a sentence
+zeroOrNA                Flag zero or missing values

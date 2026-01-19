@@ -1,0 +1,167 @@
+* using log directory ‘/Users/jonmellon/Documents/GitHub/mellonMisc/..Rcheck’
+* using R version 4.5.1 (2025-06-13)
+* using platform: aarch64-apple-darwin20
+* R was compiled by
+    Apple clang version 16.0.0 (clang-1600.0.26.6)
+    GNU Fortran (GCC) 14.2.0
+* running under: macOS Sequoia 15.6.1
+* using session charset: UTF-8
+* using option ‘--no-manual’
+* checking for file ‘./DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘mellonMisc’ version ‘1.0’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... NOTE
+Found the following hidden files and directories:
+  .Rhistory
+  .gitignore
+  ..Rcheck
+  .Rproj.user
+  .git
+These were most likely included in error. See section ‘Package
+structure’ in the ‘Writing R Extensions’ manual.
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking whether package ‘mellonMisc’ can be installed ... OK
+* checking installed package size ... INFO
+  installed size is 96.4Mb
+  sub-directories of 1Mb or more:
+    data     50.8Mb
+    extdata  45.3Mb
+* checking package directory ... OK
+* checking DESCRIPTION meta-information ... WARNING
+Non-standard license specification:
+  What license is it under?
+Standardizable: FALSE
+Checking should be performed on sources prepared by ‘R CMD build’.
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... WARNING
+Found the following directory with the name of a check directory:
+  ./..Rcheck
+Most likely, these were included erroneously.
+* checking code files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking dependencies in R code ... WARNING
+Missing or unexported objects:
+  ‘clusterSEs::clusterVCV’ ‘matrixStats::rowMeans’ ‘utils::readLines’
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+adjacencyToEdgeList: no visible global function definition for ‘combn’
+aggregateToBoundaries : <anonymous>: no visible binding for global
+  variable ‘weighted.mean’
+calcInfo: no visible global function definition for ‘var’
+codeIssueFragments: no visible global function definition for ‘data’
+codeIssueFragments: no visible binding for global variable ‘all.subs’
+codeIssueFragments: no visible binding for global variable
+  ‘mii.w6.model’
+codeIssueFragments: no visible binding for global variable ‘mii.w6.mat’
+convertOccs: no visible global function definition for ‘data’
+convertOccs: no visible binding for global variable ‘occ.crosswalks’
+logitmfx.w: no visible global function definition for ‘pt’
+logitmfxest.w: no visible global function definition for ‘model.frame’
+logitmfxest.w: no visible global function definition for ‘na.omit’
+logitmfxest.w: no visible global function definition for ‘glm’
+logitmfxest.w: no visible global function definition for ‘binomial’
+logitmfxest.w: no visible global function definition for ‘model.matrix’
+logitmfxest.w: no visible global function definition for ‘coef’
+logitmfxest.w: no visible global function definition for ‘plogis’
+logitmfxest.w : <anonymous>: no visible global function definition for
+  ‘plogis’
+logitmfxest.w: no visible global function definition for ‘dlogis’
+plotDiscrete: no visible binding for global variable ‘Freq’
+predict.clogit: no visible global function definition for
+  ‘model.matrix’
+predict.clogit: no visible global function definition for ‘model.frame’
+predict.clogit: no visible global function definition for ‘update’
+predict.clogit: no visible global function definition for ‘coef’
+predictAt: no visible global function definition for ‘model.frame’
+predictAt: no visible global function definition for ‘predict’
+readMortTable: no visible binding for global variable ‘yob’
+readMortTable: no visible binding for global variable ‘Year’
+resetPar: no visible global function definition for ‘dev.new’
+resetPar: no visible global function definition for ‘par’
+resetPar: no visible global function definition for ‘dev.off’
+robustSEs: no visible global function definition for ‘coef’
+safemerge: no visible global function definition for ‘complete.cases’
+spellCorrect: no visible global function definition for ‘adist’
+tif: no visible binding for global variable ‘z’
+tif: no visible binding for global variable ‘TIF’
+tif: no visible binding for global variable ‘Theta’
+tif: no visible binding for global variable ‘Information’
+tif: no visible binding for global variable ‘Item’
+topBottom: no visible global function definition for ‘head’
+topBottom: no visible global function definition for ‘tail’
+Undefined global functions or variables:
+  Freq Information Item TIF Theta Year adist all.subs binomial coef
+  combn complete.cases data dev.new dev.off dlogis glm head mii.w6.mat
+  mii.w6.model model.frame model.matrix na.omit occ.crosswalks par
+  plogis predict pt tail update var weighted.mean yob z
+Consider adding
+  importFrom("grDevices", "dev.new", "dev.off")
+  importFrom("graphics", "par")
+  importFrom("stats", "binomial", "coef", "complete.cases", "dlogis",
+             "glm", "model.frame", "model.matrix", "na.omit", "plogis",
+             "predict", "pt", "update", "var", "weighted.mean")
+  importFrom("utils", "adist", "combn", "data", "head", "tail")
+to your NAMESPACE file.
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... OK
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... OK
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking contents of ‘data’ directory ... OK
+* checking data for non-ASCII characters ... OK
+* checking LazyData ... WARNING
+  LazyData DB of 50.2 MB without LazyDataCompression set
+  See §1.1.6 of 'Writing R Extensions'
+* checking data for ASCII and uncompressed saves ... WARNING
+  
+  Note: significantly better compression could be obtained
+        by using R CMD build --resave-data
+                     old_size new_size compress
+  all.subs.rda           13Kb     10Kb    bzip2
+  mii.w6.mat.rda        1.0Mb    285Kb       xz
+  mii.w6.model.rda     47.7Mb   31.2Mb       xz
+  occ.crosswalks.rda     93Kb     36Kb       xz
+  soc.rda               367Kb    235Kb       xz
+  us_data_2010.rda       66Kb     23Kb    bzip2
+* checking examples ... NONE
+* checking for unstated dependencies in ‘tests’ ... OK
+* checking tests ... ERROR
+  Running ‘testthat.R’
+Running the tests in ‘tests/testthat.R’ failed.
+Last 13 lines of output:
+  Backtrace:
+      ▆
+   1. └─mellonMisc::grid_arrange_shared_legend(p1, p2) at test-plotting.R:17:3
+  ── Error ('test-plotting.R:25:3'): tif builds information plots with a mocked plot call ──
+  Error in `local_mocked_bindings(..., .package = .package)`: Can't find binding for `plot`
+  Backtrace:
+      ▆
+   1. └─testthat::with_mocked_bindings(...) at test-plotting.R:25:3
+   2.   └─testthat::local_mocked_bindings(..., .package = .package)
+   3.     └─cli::cli_abort("Can't find binding for {.arg {missing}}")
+   4.       └─rlang::abort(...)
+  
+  [ FAIL 12 | WARN 4 | SKIP 3 | PASS 58 ]
+  Error: Test failures
+  Execution halted
+* DONE
+Status: 1 ERROR, 5 WARNINGs, 2 NOTEs

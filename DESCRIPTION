@@ -1,10 +1,44 @@
 Package: mellonMisc
 Type: Package
-Title: Lots of small things 
+Title: Miscellaneous Utility Functions
 Version: 1.0
 Date: 2015-04-10
-Author: Jonathan Mellon 
-Maintainer: Who to complain to <jonathan.mellon@manchester.ac.uk>
-Description: Miscellaneous functions including network statistics, name matching and text scraping
-License: What license is it under?
-RoxygenNote: 7.1.0
+Author: Jonathan Mellon
+Maintainer: Jonathan Mellon <jonathan.mellon@manchester.ac.uk>
+Authors@R: person("Jonathan", "Mellon", email = "jonathan.mellon@manchester.ac.uk",
+    role = c("aut", "cre"))
+Description: Miscellaneous helper functions for network statistics, name matching,
+    text scraping, plotting, and survey analysis.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+LazyDataCompression: xz
+Imports:
+    dplyr,
+    ggplot2,
+    gridExtra,
+    haven,
+    Hmisc,
+    httr,
+    igraph,
+    jsonlite,
+    lmtest,
+    ltm,
+    matrixStats,
+    RCurl,
+    readr,
+    readxl,
+    reshape2,
+    RTextTools,
+    rjson,
+    sandwich,
+    SnowballC,
+    survey,
+    tau,
+    texreg,
+    tm,
+    XML
+Suggests:
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+RoxygenNote: 7.3.2
